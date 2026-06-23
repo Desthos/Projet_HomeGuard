@@ -9,162 +9,12 @@
     <link rel="icon" type="image/svg+xml" href="logo_blanc.png" sizes="48x48">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        medical: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            500: '#14b8a6',
-                            600: '#0d9488',
-                            700: '#0f766e',
-                            800: '#115e59',
-                            900: '#134e4a',
-                            950: '#042f2e',
-                        },
-                        slate: {
-                            900: '#0f172a',
-                            950: '#020617',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            transition: font-size 0.2s ease;
-        }
 
-        /* === MODE GRANDE POLICE === */
-        body.large-text {
-            font-size: 120%;
-        }
-
-        body.large-text h1 {
-            font-size: 3.5rem !important;
-        }
-
-        body.large-text h2 {
-            font-size: 1.8rem !important;
-        }
-
-        body.large-text h3 {
-            font-size: 1.4rem !important;
-        }
-
-        body.large-text h4 {
-            font-size: 1.1rem !important;
-        }
-
-        body.large-text p,
-        body.large-text a,
-        body.large-text span,
-        body.large-text li,
-        body.large-text button {
-            font-size: 1.1rem !important;
-            line-height: 1.8 !important;
-        }
-
-        body.large-text .text-xs {
-            font-size: 0.95rem !important;
-        }
-
-        body.large-text .text-sm {
-            font-size: 1rem !important;
-        }
-
-        body.large-text .text-base {
-            font-size: 1.15rem !important;
-        }
-
-        body.large-text .stat-number {
-            font-size: 4rem !important;
-        }
-
-        body.large-text .compat-label {
-            font-size: 1.05rem !important;
-        }
-
-        body.large-text .device-name {
-            font-size: 1rem !important;
-        }
-
-        body.large-text .badge-text {
-            font-size: 0.95rem !important;
-        }
-
-        /* Contraste renforcé en mode grande police */
-        body.large-text .text-slate-400 {
-            color: #94a3b8 !important;
-        }
-
-        .focus-visible-ring:focus-visible {
-            outline: 3px solid #14b8a6;
-            outline-offset: 2px;
-        }
-
-        /* Pill active */
-        #large-text-btn.active {
-            background-color: #0d9488;
-            color: white;
-            border-color: #14b8a6;
-        }
-
-        /* Stat animation */
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 900;
-            line-height: 1;
-            color: #14b8a6;
-        }
-
-        /* Device grid animation */
-        .device-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(20, 184, 166, 0.5) !important;
-        }
-
-        .device-card {
-            transition: transform 0.25s ease, border-color 0.25s ease;
-        }
-
-        /* Bluetooth pulse */
-        .bt-pulse {
-            animation: bt-ring 2s ease-in-out infinite;
-        }
-
-        @keyframes bt-ring {
-
-            0%,
-            100% {
-                opacity: 0.4;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.08);
-            }
-        }
-
-        /* Compatibility badge */
-        .compat-badge {
-            background: linear-gradient(135deg, #042f2e 0%, #0f172a 100%);
-            border: 1px solid rgba(20, 184, 166, 0.35);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-slate-950 text-slate-100 antialiased selection:bg-medical-900 selection:text-medical-100">
 
-    <!-- ===== HEADER ===== -->
     <header
         class="sticky top-0 z-50 w-full bg-slate-950/90 backdrop-blur-md border-b border-slate-900 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 h-32 flex items-center justify-between">
@@ -190,7 +40,6 @@
                     class="text-sm font-semibold text-slate-400 hover:text-medical-500 transition-colors duration-200 focus-visible-ring"
                     data-read="Lien vers la section fonctionnement détaillé">Le Module</a>
 
-                <!-- Accessibilité : boutons regroupés -->
                 <div class="flex items-center gap-2 pl-2 border-l border-slate-800">
                     <button id="large-text-btn" type="button"
                         class="inline-flex items-center justify-center px-4 py-2.5 text-xs font-bold text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-800 rounded-xl transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-medical-500 gap-2"
@@ -249,7 +98,6 @@
     </header>
 
     <main>
-        <!-- ===== HERO ===== -->
         <section id="accueil"
             class="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-medical-950/20 via-slate-950 to-slate-950">
             <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -270,7 +118,6 @@
                         pilote intelligemment votre maison via Bluetooth pour préserver l'autonomie à domicile.
                     </p>
 
-                    <!-- Badges de confiance -->
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-1">
                         <span
                             class="compat-badge inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-bold text-medical-500"
@@ -332,7 +179,6 @@
             </div>
         </section>
 
-        <!-- ===== STATS RAPIDES ===== -->
         <section class="py-12 bg-slate-900/50 border-y border-slate-900">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
@@ -360,7 +206,6 @@
             </div>
         </section>
 
-        <!-- ===== FONCTIONNALITÉS ===== -->
         <section id="fonctionnalites" class="py-20 bg-slate-950 border-b border-slate-900">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -450,7 +295,6 @@
             </div>
         </section>
 
-        <!-- ===== SECTION COMPATIBILITÉ (NOUVELLE) ===== -->
         <section id="compatibilite" class="py-20 bg-slate-950 border-b border-slate-900">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -468,7 +312,6 @@
                     </p>
                 </div>
 
-                <!-- Compatibilité caméras -->
                 <div class="mb-14 p-8 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col lg:flex-row items-center gap-8"
                     data-read="Compatibilité caméras : plus de 90 pourcent des caméras IP et de surveillance du marché sont prises en charge. Connexion automatique via le réseau Wi-Fi local.">
                     <div
@@ -508,7 +351,6 @@
                     </div>
                 </div>
 
-                <!-- Appareils Bluetooth -->
                 <div>
                     <div class="flex items-center gap-3 mb-8">
                         <div
@@ -527,7 +369,6 @@
                     </div>
 
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                        <!-- Climatisation -->
                         <div class="device-card p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col items-center text-center gap-3"
                             data-read="Climatisation. Home Guard peut allumer ou éteindre la climatisation selon la température détectée dans la pièce.">
                             <div
@@ -545,7 +386,6 @@
                             </div>
                         </div>
 
-                        <!-- Lumières -->
                         <div class="device-card p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col items-center text-center gap-3"
                             data-read="Lumières connectées. Home Guard allume les lumières lors de déplacements nocturnes pour prévenir les chutes.">
                             <div
@@ -562,7 +402,6 @@
                             </div>
                         </div>
 
-                        <!-- Sèche-linge -->
                         <div class="device-card p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col items-center text-center gap-3"
                             data-read="Sèche-linge connecté. Home Guard signale la fin d'un cycle et rappelle de sortir le linge.">
                             <div
@@ -581,7 +420,6 @@
                             </div>
                         </div>
 
-                        <!-- Lave-vaisselle -->
                         <div class="device-card p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col items-center text-center gap-3"
                             data-read="Lave-vaisselle connecté. Home Guard notifie la fin du lavage et détecte les fuites d'eau.">
                             <div
@@ -598,7 +436,6 @@
                             </div>
                         </div>
 
-                        <!-- Lave-linge -->
                         <div class="device-card p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col items-center text-center gap-3"
                             data-read="Lave-linge connecté. Home Guard suit les cycles et alerte en cas d'anomalie.">
                             <div
@@ -617,7 +454,6 @@
                             </div>
                         </div>
 
-                        <!-- Volets / serrures -->
                         <div class="device-card p-5 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col items-center text-center gap-3"
                             data-read="Volets et serrures connectés. Home Guard vérifie que les volets sont fermés et les portes verrouillées avant la nuit.">
                             <div
@@ -643,7 +479,6 @@
             </div>
         </section>
 
-        <!-- ===== MODULE / COMMENT ÇA MARCHE ===== -->
         <section id="comment-ca-marche" class="py-20 bg-slate-950">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
@@ -788,101 +623,7 @@
         </div>
     </footer>
 
-    <script>
-        // ===== MENU BURGER =====
-        const burgerBtn = document.getElementById('burger-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const burgerIcon = document.getElementById('burger-icon');
-        const closeIcon = document.getElementById('close-icon');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        function toggleMenu() {
-            mobileMenu.classList.toggle('hidden');
-            burgerIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('hidden');
-        }
-        burgerBtn.addEventListener('click', toggleMenu);
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('hidden')) toggleMenu();
-            });
-        });
-
-        // ===== AUDIO-DESCRIPTION =====
-        let audioDescActive = false;
-        const audioBtn = document.getElementById('audio-desc-btn');
-        const audioBtnMobile = document.getElementById('audio-desc-btn-mobile');
-
-        function speak(text) {
-            if (!audioDescActive) return;
-            window.speechSynthesis.cancel();
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'fr-FR';
-            utterance.rate = 1.0;
-            window.speechSynthesis.speak(utterance);
-        }
-
-        function toggleAudioDescription() {
-            audioDescActive = !audioDescActive;
-            const stateText = audioDescActive ? "Audio : ACTIVE" : "Audio";
-
-            audioBtn.innerHTML = audioDescActive
-                ? `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072M12 6v12m-3.536-9.536a5 5 0 000 7.072"/></svg> Audio : ON`
-                : `<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.536 8.464a5 5 0 010 7.072M12 6v12m-3.536-9.536a5 5 0 000 7.072"/></svg> Audio`;
-            audioBtnMobile.textContent = stateText;
-
-            if (audioDescActive) {
-                audioBtn.classList.add('bg-medical-600', 'text-white', 'border-medical-500');
-                audioBtnMobile.classList.add('bg-medical-600', 'text-white');
-                speak("L'audio description est activée. Survolez ou sélectionnez les éléments pour les écouter.");
-            } else {
-                audioBtn.classList.remove('bg-medical-600', 'text-white', 'border-medical-500');
-                audioBtnMobile.classList.remove('bg-medical-600', 'text-white');
-                window.speechSynthesis.cancel();
-            }
-            audioBtn.setAttribute('aria-pressed', audioDescActive);
-        }
-
-        audioBtn.addEventListener('click', toggleAudioDescription);
-        audioBtnMobile.addEventListener('click', toggleAudioDescription);
-
-        document.querySelectorAll('[data-read]').forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                if (audioDescActive) speak(element.getAttribute('data-read'));
-            });
-            element.addEventListener('focusin', () => {
-                if (audioDescActive) speak(element.getAttribute('data-read'));
-            });
-        });
-
-        // ===== GRAND TEXTE =====
-        let largeTextActive = false;
-        const largeTextBtn = document.getElementById('large-text-btn');
-        const largeTextBtnMobile = document.getElementById('large-text-btn-mobile');
-
-        function toggleLargeText() {
-            largeTextActive = !largeTextActive;
-            document.body.classList.toggle('large-text', largeTextActive);
-
-            const label = largeTextActive ? 'Texte normal' : 'Grand texte';
-            largeTextBtn.textContent = label;
-            largeTextBtnMobile.textContent = label;
-            largeTextBtn.setAttribute('aria-pressed', largeTextActive);
-            largeTextBtn.classList.toggle('active', largeTextActive);
-            largeTextBtnMobile.classList.toggle('active', largeTextActive);
-
-            if (largeTextActive) {
-                largeTextBtn.classList.add('bg-medical-600', 'text-white', 'border-medical-500');
-                largeTextBtnMobile.classList.add('bg-medical-600', 'text-white');
-            } else {
-                largeTextBtn.classList.remove('bg-medical-600', 'text-white', 'border-medical-500');
-                largeTextBtnMobile.classList.remove('bg-medical-600', 'text-white');
-            }
-        }
-
-        largeTextBtn.addEventListener('click', toggleLargeText);
-        largeTextBtnMobile.addEventListener('click', toggleLargeText);
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
