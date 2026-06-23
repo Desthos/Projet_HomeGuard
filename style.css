@@ -584,3 +584,107 @@ body.large-text .overlay-text,
 body.large-text .footer-text {
   color: #a8b3c7 !important;
 }
+
+body.large-text .section-shell {
+  padding: 6rem 0;
+}
+
+body.large-text .container-grid,
+body.large-text .container-narrow {
+  gap: 3rem;
+}
+
+body.large-text .hero-title {
+  margin-bottom: 1.25rem;
+}
+
+body.large-text .hero-text {
+  margin-bottom: 1.5rem;
+  max-width: 48rem;
+}
+
+body.large-text .feature-badges {
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+body.large-text .cta-row {
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+body.large-text .mini-badge {
+  padding: 0.7rem 1rem;
+}
+
+body.large-text .stats-strip {
+  padding: 2.5rem 0 1.5rem;
+}
+
+body.large-text .stats-grid {
+  gap: 1.25rem;
+}
+
+body.large-text .stat-card {
+  padding: 1.6rem 1.1rem;
+}
+
+body.large-text .section-heading {
+  margin-bottom: 3rem;
+}
+
+body.large-text .cards-grid,
+body.large-text .small-cards-grid,
+body.large-text .product-grid {
+  gap: 1.4rem;
+}
+
+body.large-text .feature-card,
+body.large-text .info-card,
+body.large-text .small-card,
+body.large-text .product-card,
+body.large-text .compat-card,
+body.large-text .bluetooth-section {
+  padding: 1.5rem;
+}
+
+body.large-text .feature-card h3,
+body.large-text .small-card h4,
+body.large-text .info-card h4 {
+  margin-bottom: 0.75rem;
+}
+
+body.large-text .feature-card p,
+body.large-text .info-card p,
+body.large-text .small-card p,
+body.large-text .section-text {
+  margin-top: 0.5rem;
+  line-height: 1.9 !important;
+}
+
+body.large-text .compat-content h3 {
+  margin-top: 1rem;
+}
+
+body.large-text .compat-content p {
+  margin-top: 1rem;
+}
+
+body.large-text .step-section {
+  margin-top: 2.5rem;
+}
+
+body.large-text .step-title {
+  margin-bottom: 1.25rem;
+}
+
+body.large-text .bluetooth-section {
+  margin-top: 1.6rem;
+}
+
+body.large-text .footer-shell {
+  padding: 2.5rem 0;
+}
+
+
+
